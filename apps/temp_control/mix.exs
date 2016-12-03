@@ -35,6 +35,6 @@ defmodule TempControl.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:elixir_ale, "~> 0.5.5"}]
   end
 end
