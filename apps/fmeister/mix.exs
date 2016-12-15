@@ -33,7 +33,7 @@ defmodule Fmeister.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [ {:sensor, "~>0.1.6"},
+    [ {:sensor, "~>0.1.7"},
       {:temp_control, in_umbrella: true}
     ]
   end
