@@ -2,4 +2,4 @@ use Mix.Config
 
 config :fmeister, temp_control: TempControl
 
-config :profile_control, soll: 23
+config :fmeister, soll: 23

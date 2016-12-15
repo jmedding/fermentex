@@ -23,7 +23,7 @@ defmodule ProfileControl do
 
   def handle_call(:soll, _from, state) do
     # just set it to 20 for now.
-    soll = Application.get_env( :profie_control, :soll, 20)
+    soll = Application.get_env( :fmeister, :soll, 20)
     {:reply, soll, state}
   end
 end
