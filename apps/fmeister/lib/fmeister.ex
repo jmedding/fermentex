@@ -29,7 +29,7 @@ defmodule Fmeister do
   end
   
   def act(soll, ist, t_control, elapsed_time) do
-    {state, _} = @temp_control.get_state(t_control)
+    state = @temp_control.get_state(t_control)
     action = get_control_action(state, soll, ist)
     Logger.info "Time: #{elapsed_time}, Current State: #{state}, Soll: #{soll}, Ist: #{ist}, Action: #{action}"
     @temp_control.make_it(t_control, action)

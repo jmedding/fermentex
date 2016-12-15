@@ -13,8 +13,7 @@ defmodule FmeisterTest do
 
     # Fmeister.init(profile, t_control, t_read)
     assert TempReader.set(t_read, 25) == :ok
-    {state, _} = TempControl.get_state(t_control)
-    assert state == :off
+    assert :off = TempControl.get_state(t_control)
 
   end
 
@@ -47,9 +46,9 @@ defmodule FmeisterTest do
     assert result = :ok
   end
     
-  defp test_fmeister_act(soll, ist, t_control, new_state, elapsed_time) do
+  defp test_fmeister_act(soll, ist, t_control, new_mode, elapsed_time) do
     Fmeister.act(soll, ist, t_control, elapsed_time)
-    {state, _} = TestTempControl.get_state(t_control)
-    assert state == new_state
+    mode = TestTempControl.get_state(t_control)
+    assert mode == new_mode
   end
 end

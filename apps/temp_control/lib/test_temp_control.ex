@@ -38,8 +38,8 @@ defmodule TestTempControl do
     {:reply, :ok, {:off, %{}}}
   end
 
-  def handle_call(:get_state, _from, state) do
-    {:reply, state, state}
+  def handle_call(:get_state, _from, state={mode, _pins}) do
+    {:reply, mode, state}
   end
 
 end
